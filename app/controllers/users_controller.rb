@@ -25,6 +25,12 @@ before_action :ensure_current_user, {only: [:edit,:update]}
     end
   end
 
+  def follows
+  end
+
+  def followers
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :introduction, :profile_image)
